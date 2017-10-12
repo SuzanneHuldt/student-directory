@@ -3,14 +3,16 @@ def input_students
     puts "To finish, just hit return twice!"
     students = []
     name = gets.chomp
+    cohort = gets.chomp
     while !name.empty? do
-        students << {name: name, cohort: :november}
+        students << {name: name, cohort: cohort}
         if students.count > 1
         puts "Now we have #{students.count} students"
     else puts "Now we have one great student!"
         end
     
         name = gets.chomp
+        cohort = gets.chomp
     end
     students
 end
