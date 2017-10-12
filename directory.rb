@@ -23,17 +23,15 @@ end
 def print(students)
     students.each_with_index do |student, index|
         
-    puts " #{student[:name]} (#{student[:cohort]} cohort) #{index}"
+    puts " #{student[:name]} (#{student[:cohort]} cohort) #{index}".center(4)
     
         
     end
 end
 
 def print_footer(students)
-    if students.count == 0
-        puts "Nothing to show!"
-        elsif condition
-            puts "Overall, we have #{students.count} great students!"
+    if students.count > 1
+        puts "Overall, we have #{students.count} great students!"
     else puts "Overall, we have one great student!"
     end
 end
@@ -42,4 +40,4 @@ students = input_students
 
 print_header
 print(students)
-print_footer(students)
+print_footer(students) 
