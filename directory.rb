@@ -30,8 +30,10 @@ def print(students)
 end
 
 def print_footer(students)
-    if students.count > 1
-        puts "Overall, we have #{students.count} great students!"
+    if students.count == 0
+        puts "Nothing to show!"
+        elsif condition
+            puts "Overall, we have #{students.count} great students!"
     else puts "Overall, we have one great student!"
     end
 end
