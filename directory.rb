@@ -18,7 +18,10 @@ end
 
 def print(students)
     students.each_with_index do |student, index|
-        puts " #{student[:name]} (#{student[:cohort]} cohort) #{index}"
+        if student[:name].index("c") == 0
+            puts " #{student[:name]} (#{student[:cohort]} cohort) #{index}"
+                else puts "sorry, not in this class!"
+        end
     end
 end
 
