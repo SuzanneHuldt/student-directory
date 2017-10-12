@@ -4,8 +4,9 @@ def input_students
     students = []
     name = gets.chomp
     cohort = gets.chomp
+    hobby = gets.chomp
     while !name.empty? do
-        students << {name: name, cohort: cohort}
+        students << {name: name, cohort: cohort, hobby: hobby}
         if students.count > 1
         puts "Now we have #{students.count} students"
     else puts "Now we have one great student!"
@@ -13,6 +14,7 @@ def input_students
     
         name = gets.chomp
         cohort = gets.chomp
+        hobby = gets.chomp
     end
     students
 end
@@ -25,7 +27,7 @@ end
 def print(students)
     students.each_with_index do |student, index|
         
-    puts " #{student[:name]} (#{student[:cohort]} cohort) #{index}".center(4)
+    puts " #{student[:name]} (#{student[:cohort]} cohort) #{index}. Favourite hobby is #{student [:hobby]}!".center(4)
     
         
     end
