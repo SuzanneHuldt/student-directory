@@ -1,6 +1,3 @@
-
-# all the students go in an array
-
 def input_students
     puts "Please enter the names of the students"
     puts "To finish, just hit return twice!"
@@ -20,8 +17,8 @@ puts "--------------"
 end
 
 def print(students)
-    students.each do |student|
-        puts "#{student[:name]} (#{student[:cohort]} cohort)"
+    students.each_with_index do |student, index|
+        puts " #{student[:name]} (#{student[:cohort]} cohort) #{index}"
     end
 end
 
